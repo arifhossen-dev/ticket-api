@@ -18,7 +18,7 @@ composer update
 
 ## Environment Variable setup
 ```php
-cp .example.env .env
+cp .env.example .env
 ```
 
 then open `.env` file and update respective variables
@@ -26,4 +26,9 @@ then open `.env` file and update respective variables
 ## Key Generate
 ```php
 php artisan key:generate
+```
+
+## Seed database with fake data
+```php
+php artisan migrate --seed
 ```
