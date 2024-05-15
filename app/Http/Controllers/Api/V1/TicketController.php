@@ -68,4 +68,18 @@ class TicketController extends ApiController
     {
         //
     }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy($ticketId)
+    {
+        try {
+            $ticket = Ticket::findOrFail($ticketId);
+            $ticket->delete();
+            return $this->ok('Ticket successfully deleted.');
+        } catch (ModelNotFoundException $exception) {
+            return $this->error('Ticket cannot be found.', 404);
+        }
+    }
 }
