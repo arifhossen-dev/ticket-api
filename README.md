@@ -1,4 +1,4 @@
-## About Tickets API
+## About The Tickets API
 
 This application build with Laravel v11.x to Manage multipurpose support tickets system.
 
